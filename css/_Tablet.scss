@@ -1,0 +1,57 @@
+/*Showcase*/
+.showcase {
+  padding: 0rem;
+  flex-wrap: wrap-reverse;
+
+  .show-txt {
+    text-align: center;
+  }
+
+  .show-pic {
+    width: 100%;
+  }
+}
+/*Different*/
+.different {
+  width: 100%;
+
+  h1 {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+.diff-container {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item {
+  text-align: center;
+  width: 100%;
+  p {
+    padding: 0rem 4rem;
+  }
+}
+
+/*Find More*/
+.find-more {
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  padding: 0;
+  justify-content: center;
+
+  h1 {
+    font: 1.8rem;
+    text-align: center;
+  }
+}
+
+/*Footer*/
+footer {
+  padding: 2rem 1.4rem;
+}
+
+.footer-info {
+  align-items: flex-start;
+}

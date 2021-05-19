@@ -1,0 +1,35 @@
+body {
+  overflow-x: hidden;
+}
+
+.nav-links {
+  position: fixed;
+  right: 0px;
+  height: 92vh;
+  top: 10vh;
+  background-color: $Very-Dark-Violet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+
+  .active {
+    color: $Very-Light-Gray;
+    border-color: $Very-Light-Gray;
+  }
+}
+
+.nav-links li {
+  opacity: 0;
+
+  a {
+    color: $Very-Light-Gray;
+  }
+}
+
+.burger {
+  display: block;
+  cursor: pointer;
+}

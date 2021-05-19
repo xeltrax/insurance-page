@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Dark-Violet: hsl(256, 26%, 20%);
+$Grayish-Blue: hsl(216, 30%, 68%);
+$Very-Dark-Violet: hsl(270, 9%, 17%);
+$Dark-Grayish-Violet: hsl(273, 4%, 51%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$heading-font: "DM Serif Display", serif;
+$para-font: "Karla", sans-serif;
+
+@mixin com-flex($prop) {
+  display: flex;
+  align-items: center;
+  justify-content: $prop;
+}
+
+header {
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: $heading-font;
+}
+
+p {
+  font-family: $para-font;
+  color: $Grayish-Blue;
+}
+
+nav {
+  height: 10vh;
+  @include com-flex(space-between);
+  //   background-color: palegreen;
+  background-color: $Very-Light-Gray;
+  padding: 0 4rem;
+}
+
+.nav-links {
+  width: 35%;
+  @include com-flex(space-around);
+  // background-color: pink;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $Dark-Grayish-Violet;
+    font-weight: bold;
+    padding: 0.4rem;
+    font-family: $para-font;
+
+    &:hover {
+      color: $Very-Dark-Violet;
+    }
+  }
+  .active {
+    border: 2px solid $Very-Dark-Violet;
+    color: $Very-Dark-Violet;
+    padding: 0.4rem 1.2rem;
+
+    &:hover {
+      background-color: $Very-Dark-Violet;
+      color: $Very-Light-Gray;
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $Very-Dark-Violet;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/*ShowCase Content*/
+.showcase {
+  min-height: 90vh;
+  @include com-flex(center);
+  background-color: $Dark-Violet;
+  background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 2rem 4rem;
+  // flex-wrap: wrap-reverse;
+}
+
+.show-txt {
+  width: 33rem;
+  height: 20rem;
+  flex-shrink: 1;
+
+  h1 {
+    font-size: 4.4rem;
+    color: $Very-Light-Gray;
+    line-height: 4.5rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1.6rem;
+    color: $Dark-Grayish-Violet;
+    word-spacing: 0.2rem;
+  }
+
+  a {
+    text-decoration: none;
+    border: 1px solid $Very-Light-Gray;
+    padding: 0.4rem 1rem;
+    color: $Very-Light-Gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $para-font;
+  }
+}
+
+.show-pic {
+  height: 38rem;
+  width: 30rem;
+  flex-shrink: 1;
+  background-color: orangered;
+  background-image: url("../images/image-intro-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*Different*/
+.different {
+  width: 80%;
+  min-height: 60vh;
+  margin: auto;
+  margin-top: 6rem;
+  h1 {
+    padding: 2rem 0;
+    font-size: 2.6rem;
+  }
+}
+
+.diff-container {
+  @include com-flex(space-between);
+}
+
+.item {
+  flex: 0 1 20rem;
+  text-align: left;
+  // background-color: palegoldenrod;
+
+  h2 {
+    padding: 1.4rem 0 0.8rem 0;
+  }
+}
+
+/*Find More*/
+.find-more {
+  width: 80%;
+  min-height: 30vh;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: $Dark-Violet;
+  @include com-flex(space-between);
+  background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 2rem;
+    width: 17.6rem;
+    color: $Very-Light-Gray;
+    // background-color: pink;
+  }
+
+  button {
+    background-color: $Very-Dark-Violet;
+    padding: 0.4rem 1rem;
+    color: $Very-Light-Gray;
+    border: 1px solid $Very-Light-Gray;
+    font-family: $para-font;
+    text-transform: uppercase;
+  }
+}
+
+/*Footer*/
+footer {
+  min-height: 50vh;
+  margin-top: 8rem;
+  background-color: $Very-Light-Gray;
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-header {
+  @include com-flex(space-between);
+}
+
+.social-links {
+  width: 15rem;
+  @include com-flex(space-between);
+
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-info {
+  @include com-flex(space-between);
+  flex-wrap: wrap;
+}
+
+.foot {
+  h6 {
+    padding: 1.4rem 0;
+    font-family: $para-font;
+    color: $Dark-Grayish-Violet;
+    text-transform: uppercase;
+    font-size: 1.01rem;
+  }
+  p {
+    color: $Very-Dark-Violet;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.12rem 0;
+  }
+}
+
+/*Responsive Navbar Section*/
+/*For Navar*/
+@media screen and (max-width: 1280px) {
+  @import "navbar";
+}
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*For Tablets */
+@media (max-width: 768px) {
+  @import "Tablet";
+}
+
+/* For Smartphones*/
+@media screen and (max-width: 500px) {
+  @import "mobile";
+}
