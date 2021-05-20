@@ -37,7 +37,6 @@ p {
 nav {
   height: 10vh;
   @include com-flex(space-between);
-  //   background-color: palegreen;
   background-color: $Very-Light-Gray;
   padding: 0 4rem;
 }
@@ -45,7 +44,6 @@ nav {
 .nav-links {
   width: 35%;
   @include com-flex(space-around);
-  // background-color: pink;
 
   li {
     list-style-type: none;
@@ -95,7 +93,6 @@ nav {
   background-position: top right;
   background-repeat: no-repeat;
   padding: 2rem 4rem;
-  // flex-wrap: wrap-reverse;
 }
 
 .show-txt {
@@ -131,7 +128,6 @@ nav {
   height: 38rem;
   width: 30rem;
   flex-shrink: 1;
-  background-color: orangered;
   background-image: url("../images/image-intro-desktop.jpg");
   background-size: cover;
   background-position: center;
@@ -157,7 +153,6 @@ nav {
 .item {
   flex: 0 1 20rem;
   text-align: left;
-  // background-color: palegoldenrod;
 
   h2 {
     padding: 1.4rem 0 0.8rem 0;
@@ -182,7 +177,6 @@ nav {
     font-size: 2rem;
     width: 17.6rem;
     color: $Very-Light-Gray;
-    // background-color: pink;
   }
 
   button {
