@@ -37,6 +37,8 @@ nav {
 
 .nav-links {
   width: 35%;
+  background-color: pink;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -43,6 +43,8 @@ nav {
 
 .nav-links {
   width: 35%;
+  background-color: pink;
+  height: 45px;
   @include com-flex(space-around);
 
   li {
